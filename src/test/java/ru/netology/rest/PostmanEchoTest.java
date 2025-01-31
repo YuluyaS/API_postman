@@ -1,15 +1,15 @@
 package ru.netology.rest;
 
 import org.junit.jupiter.api.Test;
+
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.when;
 
 class PostmanEchoTest {
 
     @Test
     void shouldReturnSendData() {
     given()
-                .baseUri("https://postman-echo.com");
+                .baseUri("https://postman-echo.com")
                 .body("Hi")
                 .when().log().all()
                 .post("/post")
